@@ -1,7 +1,8 @@
 import "./app.scss";
+import Routes from "./routes";
 
 const App = () => {
-  return <></>;
+  return <Routes></Routes>;
 };
 
 export default App;
