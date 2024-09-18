@@ -9,6 +9,7 @@ function createWindow(): void {
     height: 770,
     show: false,
     autoHideMenuBar: false,
+    backgroundColor: "#02010f",
     ...(process.platform === "linux"
       ? {
           icon: path.join(__dirname, "../../build/icon.png"),

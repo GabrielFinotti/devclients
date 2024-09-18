@@ -1,0 +1,59 @@
+@import "../../assets/styles/index.scss";
+
+aside {
+  border-right: 1px solid white;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 0;
+  height: 100vh;
+  padding-top: 10px;
+
+  overflow: hidden;
+
+  transition: all 400ms;
+
+  &.open {
+
+    width: 250px;
+  }
+
+  #closeSidebar {
+    border-bottom: 1px solid white;
+
+    color: white;
+    font-size: rem-calc(18);
+    font-weight: normal;
+    text-align: start;
+    line-height: 8px;
+
+    padding: 30px 0 43px 30px;
+
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      border-bottom: 1px solid white;
+
+      color: white;
+      font-size: rem-calc(20);
+      text-decoration-line: none;
+
+      padding: 20px;
+
+      transition: all 500ms;
+
+      &:hover,
+      &.active {
+        background-color: rgb(206, 206, 206);
+
+        color: black;
+      }
+    }
+  }
+}

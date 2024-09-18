@@ -1,0 +1,40 @@
+@import "../../assets/styles/index.scss";
+
+header {
+  border-bottom: 1px solid white;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 30px;
+  padding-left: 10px;
+
+  #openSidebar {
+    color: white;
+    font-size: rem-calc(18);
+    font-weight: normal;
+
+    width: 38.02px;
+
+    overflow: hidden;
+
+    transition: all 400ms;
+    cursor: pointer;
+
+    &.open {
+      width: 0;
+    }
+  }
+
+  h1 {
+    color: white;
+    font-size: rem-calc(26);
+
+    transition: all 400ms;
+
+    &.sidebar-open {
+      padding-left: 20px;
+    }
+  }
+}
