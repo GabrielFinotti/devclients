@@ -2,6 +2,7 @@ import { app, shell, BrowserWindow, ipcMain } from "electron";
 import path from "node:path";
 import { electronApp, optimizer, is } from "@electron-toolkit/utils";
 import { createFileRoute, createURLRoute } from "electron-router-dom";
+import createTray from "./tray";
 
 function createWindow(): void {
   const mainWindow = new BrowserWindow({
@@ -22,6 +23,8 @@ function createWindow(): void {
       sandbox: false,
     },
   });
+
+  createTray(mainWindow);
 
   if (process.platform === "darwin") {
     const iconPath = path.resolve(__dirname, "resources", "icon.png");
